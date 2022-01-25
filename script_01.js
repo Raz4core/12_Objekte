@@ -27,14 +27,21 @@ let arr;
 let person = 
         {
                 firstName: "Thilo",
-                familyName:"Schönemeyer"
-
+                familyName:"Schönemeyer",
+                salery:[120000,160000],
+                permission: true
         };      
 
 
 output(person);
+person.firstName = "Thilo"
 output(person.firstName);
 output(person.familyName);
+
+const txt = "Ich bin" + person.firstName + " " +
+                person.familyName + "und verdiene" +
+                person.salery[1] + "p.a"
+output(txt);
 
 /** Ausgabe */
 function output(outputData) {
