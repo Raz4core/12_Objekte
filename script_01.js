@@ -29,19 +29,26 @@ let person =
                 firstName: "Thilo",
                 familyName:"Schönemeyer",
                 salery:[120000,160000],
-                permission: true
+                permission: true,
+                sayHello: 
+                        function() {
+                            return "Hello, ich bin " + this.firstName;    
+                        }
+     
         };      
 
 
-output(person);
-person.firstName = "Thilo"
-output(person.firstName);
-output(person.familyName);
+// output(person);
+ person.firstName = "Thilo";
+// output(person.firstName);
+// output(person.familyName);
 
-const txt = "Ich bin" + person.firstName + " " +
-                person.familyName + "und verdiene" +
-                person.salery[1] + "p.a"
+const txt = "Ich bin " + person.firstName + " " +
+                person.familyName + " und verdiene " +
+                person.salery[1] + " p.a"
 output(txt);
+
+output(person.sayHello());
 
 /** Ausgabe */
 function output(outputData) {
